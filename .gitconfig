@@ -1,6 +1,13 @@
 [user]
-	email = catsgotmytongue@gmail.com
 	name = Curt Mullin
+	email = mullinc@oya.state.or.us
+[filter "lfs"]
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+[gui]
+
 [alias]
   adog = log --all --decorate --oneline --graph
   br = branch
@@ -10,10 +17,10 @@
   conf = config --show-origin -l
   cpr = "!vsts code pr create --auto-complete -s \"$(git branch-name)\" --open --title "
   df = diff
-  gr = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
   graphviz = "!f() { echo 'digraph git {' ; git log --pretty='format:  %h -> { %p }' \"$@\" | sed 's/[0-9a-f][0-9a-f]*/\"&\"/g' ; echo '}'; }; f"
   hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
   hist1 = log --pretty=format:\"%h - %an, %ar : %s\"
+  hs = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
   hst = log --pretty=format:'%Cblue%h%Creset %s %Cgreen(%an, %ar)' --abbrev-commit
   last = log -1 HEAD
   pf = push --force-with-lease
