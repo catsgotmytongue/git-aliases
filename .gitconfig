@@ -1,6 +1,5 @@
-[user]
-  email = catsgotmytongue@gmail.com
-  name = Curt Mullin
+[include]
+   path = .gituser
 
 [include]
   path = .gitaliases
