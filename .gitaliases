@@ -1,5 +1,4 @@
 [alias]
-  tt = branch -vv
   adog = log --all --decorate --oneline --graph
   alias-list = config --get-regexp alias
   assume-c = update-index --no-assume-unchanged
@@ -31,4 +30,4 @@
   unstage = "reset --"
   unstage = reset HEAD
   untrack = branch --unset-upstream
-  updatemaster = "pull origin master:master" 
+  updatemaster = "pull origin master:master"
