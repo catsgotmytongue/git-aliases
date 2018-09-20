@@ -29,3 +29,5 @@
   unstage = reset HEAD
   untrack = branch --unset-upstream
   updatemaster = "pull origin master:master"
+[winUpdater]
+	recentlySeenVersion = 2.18.0.windows.1
