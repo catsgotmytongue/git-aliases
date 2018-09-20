@@ -1,6 +1,6 @@
-[user]
-	name = Curt Mullin
-	email = mullinc@oya.state.or.us
+[include]
+   path = .gituser
+   
 [filter "lfs"]
 	process = git-lfs filter-process
 	required = true
