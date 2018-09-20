@@ -8,31 +8,5 @@
 	smudge = git-lfs smudge -- %f
 [gui]
 
-[alias]
-  adog = log --all --decorate --oneline --graph
-  br = branch
-  branch-name = "rev-parse --abbrev-ref HEAD"
-  ci = commit
-  co = checkout
-  conf = config --show-origin -l
-  cpr = "!vsts code pr create --auto-complete -s \"$(git branch-name)\" --open --title "
-  df = diff
-  graphviz = "!f() { echo 'digraph git {' ; git log --pretty='format:  %h -> { %p }' \"$@\" | sed 's/[0-9a-f][0-9a-f]*/\"&\"/g' ; echo '}'; }; f"
-  hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
-  hist1 = log --pretty=format:\"%h - %an, %ar : %s\"
-  hs = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
-  hst = log --pretty=format:'%Cblue%h%Creset %s %Cgreen(%an, %ar)' --abbrev-commit
-  last = log -1 HEAD
-  pf = push --force-with-lease
-  pushc = "!git push -u origin \"$(git branch-name)\""
-  remaster = !git fetch && git rebase origin/master
-  s = status -b -s
-  st = status
-  startover = !git reset --hard HEAD && git clean -f -d -x
-  testmerge = merge --no-commit --no-ff
-  tree = "log --oneline --decorate --all --graph"
-  tree = log --all --graph --decorate=short --color --format=format:'%C(bold blue)%h%C(reset) %C(auto)%d%C(reset)\n         %C(black)[%cr]%C(reset)  %x09%C(black)%an: %s %C(reset)'
-  unstage = "reset --"
-  unstage = reset HEAD
-  untrack = branch --unset-upstream
-  updatemaster = "pull origin master:master"
+[include]
+   path=.gitaliases
