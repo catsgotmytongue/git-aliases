@@ -34,4 +34,4 @@
   unstage = "reset --"
   unstage = reset HEAD
   untrack = branch --unset-upstream
-  updatemaster = "pull origin master:master"
+  del-remote-branch="push origin --delete "
