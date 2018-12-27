@@ -1,3 +1,4 @@
+
 [include]
    path = .gituser
    
@@ -10,3 +11,5 @@
 
 [include]
    path=.gitaliases
+[core]
+	autocrlf = true
