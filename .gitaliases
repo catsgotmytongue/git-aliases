@@ -1,10 +1,11 @@
 [alias]
   adog = log --all --decorate --oneline --graph
-  alias-list = config --get-regexp alias
+  aliases = config --get-regexp alias
   assume-c = update-index --no-assume-unchanged
   assume-u = update-index --assume-unchanged
   assumed = "!git ls-files -v | grep ^h | cut -c 3-"
   br = branch
+  brv = branch -vv
   branch-name = "rev-parse --abbrev-ref HEAD"
   ci = commit
   co = checkout
@@ -17,6 +18,7 @@
   hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
   hist1 = log --pretty=format:\"%h - %an, %ar : %s\"
   hs = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+  h5 = !git hs -5
   hst = log --pretty=format:'%Cblue%h%Creset %s %Cgreen(%an, %ar)' --abbrev-commit
   last = log -1 HEAD
   pf = push --force-with-lease
