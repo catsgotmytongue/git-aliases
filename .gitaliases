@@ -24,6 +24,7 @@
   pf = push --force-with-lease
   pushc = "!git push -u origin \"$(git branch-name)\""
   remaster = !git fetch && git rebase origin/master
+  rebasemain = !git fetch && git rebase origin/main
   rc = rebase --continue
   rs = rebase --skip
   ra = rebase --abort

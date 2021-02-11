@@ -9,3 +9,5 @@
   
 [core]
 	autocrlf = input
+[credential]
+	helper = /c/Program\\ Files/Git/mingw64/libexec/git-core/git-credential-manager.exe
