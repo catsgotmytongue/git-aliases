@@ -1,13 +1,28 @@
 [include]
-   path = .gituser
+  path = ~/.gituser
 
 [include]
-  path = .gitaliases
+  path = ~/.gitaliases
+
+[include]
+  path = ~/themes.gitconfig
+ 
+[delta]
+    features = github-dark
+    #features = woolly-mammoth
+    #side-by-side = true
+
+[interactive]
+  diffFilter = delta --color-only
 
 [winUpdater]
-	recentlySeenVersion = 2.22.0.windows.1
+  recentlySeenVersion = 2.22.0.windows.1
   
 [core]
-	autocrlf = input
+  autocrlf = input
+  pager = delta
+  editor = vim
+	filemode = false
+	
 [credential]
-	helper = /c/Program\\ Files/Git/mingw64/libexec/git-core/git-credential-manager.exe
+  helper = /c/Program\\ Files/Git/mingw64/libexec/git-core/git-credential-manager.exe
