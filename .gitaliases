@@ -48,5 +48,6 @@
 rbnf = !git fetch && git rebase origin/NETFramework
 nfwhat = "log --oneline origin/NETFramework~1..HEAD"
 wt = worktree
-log-files = !git log -n ${1:-20} --pretty=format:\"%h <-- %s\" --name-only | awk '/^[0-9a-f]/ {printf \"\\n%s\\n\",$0} /^[^0-9a-f]/ { printf \"  %s\\n\",$0}'
-
+log-files-5 = !git log -n 5 --pretty=format:\"%h <-- %s\" --name-only | awk '/^[0-9a-f]/ {printf \"\\n%s\\n\",$0} /^[^0-9a-f]/ { printf \"  %s\\n\",$0}'
+log-files-3 = !git log -n 3 --pretty=format:\"%h <-- %s\" --name-only | awk '/^[0-9a-f]/ {printf \"\\n%s\\n\",$0} /^[^0-9a-f]/ { printf \"  %s\\n\",$0}'
+log-files-10 = !git log -n 10 --pretty=format:\"%h <-- %s\" --name-only | awk '/^[0-9a-f]/ {printf \"\\n%s\\n\",$0} /^[^0-9a-f]/ { printf \"  %s\\n\",$0}'
